@@ -7,8 +7,8 @@
  *
  * @package	ExpressionEngine
  * @subpackage	Addons
- * @category	Module
- * @author	Malcolm Elswortgh
+ * @category	Extension
+ * @author	Malcolm Elsworth / Rob Sanchez (@_rsan)
  * @link	http://labs.electricputty.co.uk
  * @copyright 	Copyright (c) 2011 Electric Putty
  * @license   	http://creativecommons.org/licenses/by-sa/3.0/ Attribution-Share Alike 3.0 Unported
