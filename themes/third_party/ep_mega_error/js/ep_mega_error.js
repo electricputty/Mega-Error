@@ -1,11 +1,11 @@
 $(document).ready(function(){
 
-	var tabs_with_errors = new Array();
+	var tabs_with_errors = [];
 	var error_message = "";
 	
 	$("#holder").children().each(function()
 	{
-		if($(this).find(".notice").length > 0)
+		if($(this).find("fieldset.holder > div.notice").length > 0)
 		{
 			tabs_with_errors.push($(this).attr("id"));
 		}
@@ -15,7 +15,7 @@ $(document).ready(function(){
 	{
 		for(e=0; e<tabs_with_errors.length; e++)
 		{
-			em = tabs_with_errors[e].replace("menu_", "")
+			var em = tabs_with_errors[e].replace("menu_", "");
 			em = em.replace(/_/g, " ");
 			
 			error_message += "<li><strong>" + em + "</strong></li>";
