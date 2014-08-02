@@ -48,9 +48,11 @@ class Ep_mega_error_ext {
 	{
 		$row = $this->EE->extensions->last_call !== FALSE ? $this->EE->extensions->last_call : $row;
 		
-		// add jQuery to control panel head
-		$this->EE->cp->add_to_head('<link type="text/css" href="'.$this->_theme_base_url.'css/ep_mega_error.css" rel="stylesheet" />');
-		$this->EE->cp->add_to_head('<script src="'.$this->_theme_base_url.'js/ep_mega_error.js"></script>');
+		// add javascript to control panel
+		$add_to = version_compare(APP_VER, '2.8', '<') ? 'add_to_head' : 'add_to_foot';
+
+		$this->EE->cp->{$add_to}('<link type="text/css" href="'.$this->_theme_base_url.'css/ep_mega_error.css" rel="stylesheet" />');
+		$this->EE->cp->{$add_to}('<script src="'.$this->_theme_base_url.'js/ep_mega_error.js"></script>');
 		
 		return $row;
 	}
